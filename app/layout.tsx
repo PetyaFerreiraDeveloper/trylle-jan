@@ -1,12 +1,16 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import { Josefin_Sans } from "next/font/google"
+import "./globals.css"
+import { Header } from "./components/Header"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
+const josefinSans = Josefin_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Trylle Jan',
-  description: 'TrylleJan.dk – Lad mig lave dit næste arrangement fortryllende!',
+  title: "Trylle Jan",
+  description:
+    "TrylleJan.dk – Lad mig lave dit næste arrangement fortryllende!",
 }
 
 export default function RootLayout({
@@ -16,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={josefinSans.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
