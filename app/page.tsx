@@ -1,9 +1,18 @@
-const Home = () => {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>Home Page</p>
-    </main>
-  )
+import { PageContent } from "./components/PageContent"
+
+const getData = async () => {
+  const res = await fetch("https://tryllejan.dk/wp-json/wp/v2/pages/58")
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data")
+  }
+  return res.json()
+}
+
+const Home = async () => {
+  const data = await getData()
+
+  return <PageContent props={data} />
 }
 
 export default Home
