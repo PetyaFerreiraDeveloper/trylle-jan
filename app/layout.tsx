@@ -1,10 +1,8 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import { Josefin_Sans } from "next/font/google"
 import "./globals.css"
 import { Header } from "./components/Header"
 
-const inter = Inter({ subsets: ["latin"] })
 const josefinSans = Josefin_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -22,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={josefinSans.className}>
         <Header />
-        {children}
+        <main className="mt-10 mx-auto px-5 md:px-10 lg:px-20 xl:px-36">
+          {children}
+        </main>
       </body>
     </html>
   )
