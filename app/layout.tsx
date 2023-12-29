@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={josefinSans.className}>
         <Header />
-        <main className="mt-10 mx-auto px-5 md:px-10 lg:px-20 xl:px-36">
+        <main className="mt-10 mx-auto px-5 md:px-10 lg:px-20 xl:px-36 pb-10">
           {children}
         </main>
       </body>
