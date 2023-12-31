@@ -20,10 +20,24 @@ export const ContactCard = ({ data }: ContactCard) => {
       </div>
       <div className="pb-5">
         <h3 className="text-3xl mb-5">{data.title}</h3>
-        <h4>Tryllekunstner: {data.subtitle}</h4>
-        <p>Telefon: {data.phone}</p>
-        <p>Mail: {data.email}</p>
-        {data.cvr ? <p>CVR: {data.cvr} </p> : null}
+        <h4>
+          <span className="font-bold text-gray-500">Tryllekunstner: </span>
+          <span>{data.subtitle}</span>
+        </h4>
+        <p>
+          <span className="font-bold text-gray-500">Telefon: </span>
+          <a href={`tel:${data.phone}`}>{data.phone}</a>
+        </p>
+        <p>
+          <span className="font-bold text-gray-500">Mail: </span>
+          <a href={`mailto:${data.email}`}>{data.email}</a>
+        </p>
+        {data.cvr ? (
+          <p>
+            <span className="font-bold text-gray-500">CVR: </span>
+            <span>{data.cvr}</span>
+          </p>
+        ) : null}
       </div>
     </section>
   )
