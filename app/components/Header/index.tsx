@@ -36,7 +36,8 @@ export const Header = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="absolute inset-0 bg-white/80" />
+            <Dialog.Overlay className="absolute inset-0 bg-black/80" />
+            {/*/*bg-white/80*/}
           </Transition.Child>
           <Transition.Child
             as={ Fragment }
@@ -47,14 +48,15 @@ export const Header = () => {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <nav className="fixed flex flex-col inset-y-0 right-0 w-full items-end overflow-hidden md:w-6/12 pt-12 bg-gray-800 px-5 md:px-10 lg:px-20 xl:px-36 text-white">
-              <Image src="/close.svg" alt="close" width={ 35 } height={ 35 } className="lg:hidden pb-6 text-white" onClick={ () => setMenuOpen(false) }/>
+            <nav className="fixed flex flex-col inset-y-0 right-0 w-full items-end overflow-hidden md:w-6/12 pt-12 bg-white px-5 md:px-10 lg:px-20 xl:px-36">
+              {/*bg-gray-800 text-white*/}
+              <Image src="/close.svg" alt="close" width={ 35 } height={ 35 } className="lg:hidden pb-6" onClick={ () => setMenuOpen(false) }/>
               <ul className={"flex flex-col w-full gap-y-6"}>
                 { menuItems.map((item, index) =>
                   <li key={ `menu-item-${ index }` }>
                     <Link
                       href={ item.href }
-                      className={ 'text-white underline-offset-8 hover:underline cursor-pointer focus:outline-none ui-focus-visible:outline-none' } // ui-focus-visible:ring-2 ui-focus-visible:ring-blue
+                      className={ 'text-black underline-offset-8 hover:underline cursor-pointer focus:outline-none ui-focus-visible:outline-none' } // ui-focus-visible:ring-2 ui-focus-visible:ring-blue
                       onClick={ () => setMenuOpen(false) }
                     >
                       { item.name.toUpperCase() }
