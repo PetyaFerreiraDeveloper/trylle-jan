@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-    <rect x="19.782" y="38.607" width="45.414" height="2.5"/>
-    <rect x="19.782" y="58.758" width="30" height="2.5"/>
-    <rect x="19.782" y="48.75" width="60" height="2.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+    <g id="Style=Solid, Size=48">
+        <path id="Icon" fill-rule="evenodd" clip-rule="evenodd" d="M6 12C6 11.0335 6.7835 10.25 7.75 10.25H40.25C41.2165 10.25 42 11.0335 42 12C42 12.9665 41.2165 13.75 40.25 13.75H7.75C6.7835 13.75 6 12.9665 6 12ZM6 24C6 23.0335 6.7835 22.25 7.75 22.25H40.25C41.2165 22.25 42 23.0335 42 24C42 24.9665 41.2165 25.75 40.25 25.75H7.75C6.7835 25.75 6 24.9665 6 24ZM7.75 34.25C6.7835 34.25 6 35.0335 6 36C6 36.9665 6.7835 37.75 7.75 37.75H40.25C41.2165 37.75 42 36.9665 42 36C42 35.0335 41.2165 34.25 40.25 34.25H7.75Z" fill="#1A1B1C"/>
+    </g>
 </svg>
