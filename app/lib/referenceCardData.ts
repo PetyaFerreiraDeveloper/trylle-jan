@@ -3,12 +3,12 @@ export type ReferenceCardType = {
   description: string
   writerName?: string
   writerTitle?: string
-  date: string
+  date: string | Date
 }
 
 export const referenceCardData: ReferenceCardType[] = [
   {
-    title: "FORSVARSMINISTERIET",
+    title: "Forsvarsministeriet",
     description:
       "Kære Jan. Tusind tak for en virkelig fin aften i går. Alle børn (og voksne) var virkelig glade for dit hyggelige og sjove indslag med tryllekunst kombineret med julegaveuddeling.Jeg har fået virkelig mange fine tilbagemeldinger fra flere deltagere, som fortæller, at deres børn har haft en fest. Det fungerede rigtig godt, at der både var lidt julesange, sjov med børnene og faktisk også grin til de voksne. Vi håber, du får tid til at lægge vejen fordi Holmens Kanal igen til jul næste år",
     writerName: "Mille Ditlevsen",
@@ -40,5 +40,13 @@ export const referenceCardData: ReferenceCardType[] = [
     writerName: "Lars Bæk",
     writerTitle: "formand",
     date: "19. januar 2019",
+  },
+  {
+    title: "Privat 5 års fødselsdag",
+    description:
+      "Til vores søns 5-års fødselsdag kom tryllekunstneren Jan hjem til os. Sammen med sin hjælper Niko leverede han en fantastisk forestilling, der begejstrede både børn og voksne. Jan formåede at skabe magi og glæde i vores hjem, og hans samspil med Niko var en fornøjelse for alle!",
+    writerName: "Petya Naydenova Ferreira",
+    writerTitle: "mor",
+    date: "12. december 2023",
   },
 ]
