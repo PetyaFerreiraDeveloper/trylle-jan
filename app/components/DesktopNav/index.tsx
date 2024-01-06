@@ -1,12 +1,17 @@
 import Link from "next/link"
 
+const menuItems = [
+  { name: "Galleri", href: "/galleri" },
+  { name: "Referencer", href: "/referencer" },
+  { name: "Magiske Emil", href: "/magiske-emil" },
+  { name: "Kontakt & Booking", href: "/kontakt" },
+]
 export const DesktopNav = () => {
   return (
-    <nav className="hidden lg:flex gap-x-3 font-bold">
-      <Link href="/galleri">{"Galleri".toUpperCase()}</Link>
-      <Link href="/referencer">{"Referencer".toUpperCase()}</Link>
-      <Link href="/magiske-emil">{"Magiske Emil".toUpperCase()}</Link>
-      <Link href="/kontakt">{"Kontakt & Booking".toUpperCase()}</Link>
+    <nav className="hidden lg:flex gap-x-6 font-bold">
+      {menuItems.map( (item, index) =>
+        <Link key={`menu-item-${index}`} href={item.href}>{item.name.toUpperCase()}</Link>
+      )}
     </nav>
   )
 }
