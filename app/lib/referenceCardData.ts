@@ -3,7 +3,7 @@ export type ReferenceCardType = {
   description: string
   writerName?: string
   writerTitle?: string
-  date: string
+  date: string | Date
 }
 
 export const referenceCardData: ReferenceCardType[] = [

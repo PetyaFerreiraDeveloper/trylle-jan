@@ -1,7 +1,6 @@
 export const PageContent = (props: any) => {
 
   const pageText = props.props.content.rendered
-  console.log(pageText)
 
   const pageTitle = props.props.title.rendered
 
