@@ -1,10 +1,11 @@
 "use client"; // This is a client component 👈🏽
 
 import Link from "next/link"
-import Image from "next/image"
+import clsx from 'clsx';
 import { DesktopNav } from "../DesktopNav"
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import Hamburger from "@/app/components/Hamburger";
 
 const menuItems = [
   { name: "Galleri", href: "/galleri" },
@@ -17,15 +18,16 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+    <>
     <header
       className="sticky top-0 w-full bg-white mx-auto px-5 md:px-10 lg:px-20 xl:px-36 flex justify-between items-center pt-12 pb-2 shadow-md">
       <Link href="/" className="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer w-[200px]">TrylleJan.dk</Link>
-      <Image src="/hamburger.svg" alt="hamburger" width={ 35 } height={ 35 } className="lg:hidden pb-2" onClick={ () => setMenuOpen(true) }/>
-      <DesktopNav menuItems={ menuItems } />
+      <DesktopNav menuItems={ menuItems }/>
       <Transition show={ menuOpen } as={ Fragment }>
+      {/*<Transition show={ true } as={ Fragment }>*/}
         <Dialog
           onClose={ () => setMenuOpen(false) }
-          className="fixed inset-y-0 right-0 z-50 h-screen w-screen min-[1090px]:hidden"
+          className="fixed inset-y-0 right-0 z-40 h-screen w-screen lg:hidden"
         >
           <Transition.Child
             as={ Fragment }
@@ -36,8 +38,7 @@ export const Header = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Overlay className="absolute inset-0 bg-black/80" />
-            {/*/*bg-white/80*/}
+            <Dialog.Overlay className="hidden md:flex absolute inset-0 bg-white/80"/>
           </Transition.Child>
           <Transition.Child
             as={ Fragment }
@@ -48,15 +49,14 @@ export const Header = () => {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <nav className="fixed flex flex-col inset-y-0 right-0 w-full items-end overflow-hidden md:w-6/12 pt-12 bg-white px-5 md:px-10 lg:px-20 xl:px-36">
-              {/*bg-gray-800 text-white*/}
-              <Image src="/close.svg" alt="close" width={ 35 } height={ 35 } className="lg:hidden pb-6" onClick={ () => setMenuOpen(false) }/>
-              <ul className={"flex flex-col w-full gap-y-6"}>
+            <nav
+              className="fixed flex flex-col inset-y-0 right-0 w-full items-end overflow-hidden md:w-6/12 pt-10 bg-gray-800 px-5 md:px-10 lg:px-20 xl:px-36 text-white">
+              <ul className={ "flex flex-col w-full gap-y-6 pt-12" }>
                 { menuItems.map((item, index) =>
-                  <li key={ `menu-item-${ index }` }>
+                  <li key={ `menu-item-${ index }` } className={ "text-white fill-white cursor-pointer" }>
                     <Link
                       href={ item.href }
-                      className={ 'text-black underline-offset-8 hover:underline cursor-pointer focus:outline-none ui-focus-visible:outline-none' } // ui-focus-visible:ring-2 ui-focus-visible:ring-blue
+                      className={ 'text-white underline-offset-8 hover:underline focus:outline-none ui-focus-visible:outline-none' } // ui-focus-visible:ring-2 ui-focus-visible:ring-blue
                       onClick={ () => setMenuOpen(false) }
                     >
                       { item.name.toUpperCase() }
@@ -69,5 +69,16 @@ export const Header = () => {
         </Dialog>
       </Transition>
     </header>
-  )
+    <div className={ clsx("absolute top-0 pt-10 px-5 md:px-10 right-0 z-50 lg:hidden" , menuOpen ? "text-white" : "text-black") }>
+      <button
+        onClick={ () => setMenuOpen(!menuOpen) }
+        className={ "focus-outline mr-2 lg:hidden p-2 hover:text-hover sm:pl-0 lg:inline-block xl:hidden" }
+        aria-label={ menuOpen ? "close" : "open" }
+        data-testid="menu-tablet"
+      >
+        <Hamburger open={ menuOpen } animate/>
+      </button>
+    </div>
+  </>
+)
 }
