@@ -3,10 +3,13 @@ import { ContactCard } from "../components/ContactCard"
 
 const ContactPage = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-10 lg:flex-row mx-auto">
-      {contactCardData.map((data) => (
-        <ContactCard data={data} key={data.email} />
-      ))}
+    <div className="page-section">
+      <h2 className="text-3xl">Kontakt & Booking</h2>
+      <div className={"flex gap-10"}>
+        { contactCardData.map((data) => (
+          <ContactCard data={ data } key={ data.email }/>
+        )) }
+      </div>
     </div>
   )
 }

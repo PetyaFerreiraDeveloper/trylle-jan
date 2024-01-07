@@ -3,8 +3,8 @@ const tradeWinds = Trade_Winds({ weight: "400", subsets: ["latin"] })
 
 const MagicEmilPage = () => {
   return (
-    <>
-      <h1 className={`${tradeWinds.className} mb-4 text-3xl tracking-widest`}>MAGISKE EMIL</h1>
+    <section className={ "page-section" }>
+      <h1 className={ `${ tradeWinds.className } mb-4 text-3xl tracking-widest` }>MAGISKE EMIL</h1>
       <p>
         Jeg Emil og jeg er 12 år. Da jeg var seks år begyndte jeg at finde
         interesse for tryl og fik mit første trick og siden da er jeg blevet
@@ -15,7 +15,7 @@ const MagicEmilPage = () => {
         til en trylle kunster så hav meg i tankerne jeg vil levere det mes
         magiske show i nogen sinde kommer til at se.
       </p>
-    </>
+    </section>
   )
 }
 
