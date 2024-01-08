@@ -2,11 +2,8 @@ import Image from "next/image";
 import { HtmlText } from "@/app/components/HtmlText";
 
 export const PageContent = ({data}: any) => {
-  console.log({data})
-  const regex = '\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]'
-
-  const test = data.content.rendered.replace(regex,"");
-
+  const test = data.content.rendered.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g,"");
+  console.log({test});
 
   /*const test = `<p>[vc_row][vc_column][vc_column_text]</p>\n +
     <h1 style="text-align: center;">Om TrylleJan &amp; JuleJan</h1>\n +
