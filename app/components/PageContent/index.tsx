@@ -3,6 +3,10 @@ import { HtmlText } from "@/app/components/HtmlText";
 
 export const PageContent = ({data}: any) => {
   console.log({data})
+  const regex = '\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]'
+
+  const test = data.content.rendered.replace(regex,"");
+
 
   /*const test = `<p>[vc_row][vc_column][vc_column_text]</p>\n +
     <h1 style="text-align: center;">Om TrylleJan &amp; JuleJan</h1>\n +
@@ -36,7 +40,7 @@ export const PageContent = ({data}: any) => {
           className="absolute z-10 bottom-0 w-full h-40 flex bg-gradient-to-t from-white to-white/0">
         </div>
       </section>
-      <HtmlText html={data.content.rendered} />
+      <HtmlText html={test} />
       {/*<div className="flex flex-col gap-4 w-full lg:hidden mx-auto px-5 md:px-10 lg:px-20 xl:px-36 py-10 lg:py-0">
         <h1 className="text-3xl">Om TrylleJan & JuleJan</h1>
         <h3>Hvem er TrylleJan & JuleJan?</h3>
