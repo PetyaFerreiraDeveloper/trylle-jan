@@ -12,9 +12,9 @@ const getData = async () => {
 const Home = async () => {
   // data is the content on the front page of the wordpress in markup format
   const data = await getData()
-  console.log(data);
+  console.log({data});
 
-  return <PageContent props={data} />
+  return <PageContent data={data} />
 }
 
 export default Home
