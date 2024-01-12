@@ -19,6 +19,7 @@ const Home = async () => {
     <PageContent
       text={data.content.rendered}
       imageUrl={imageData[0]["source_url"]}
+      secretBtn={true}
     />
   );
 };

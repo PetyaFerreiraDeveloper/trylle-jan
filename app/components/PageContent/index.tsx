@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { HtmlText } from "@/app/components/HtmlText";
+import { DiVim } from "react-icons/di";
 
 type Props = {
   text: string;
   imageUrl: string;
+  secretBtn?: boolean;
 };
 
-export const PageContent = ({ text, imageUrl }: Props) => {
+export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
   const purgedText = text.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g, "");
 
   return (
@@ -26,6 +28,11 @@ export const PageContent = ({ text, imageUrl }: Props) => {
       <section className="flex flex-col px-5 md:px-10 lg:px-20 xl:px-36 lg:text-xl">
         <HtmlText html={purgedText} />
       </section>
+      {secretBtn ? (
+        <a href="http://gg0.us/jang">
+          <p className="p-10 -mb-10"></p>
+        </a>
+      ) : null}
     </>
   );
 };
