@@ -1,10 +1,12 @@
-import { Trade_Winds } from "next/font/google"
-const tradeWinds = Trade_Winds({ weight: "400", subsets: ["latin"] })
+import { Trade_Winds } from "next/font/google";
+const tradeWinds = Trade_Winds({ weight: "400", subsets: ["latin"] });
 
 const MagicEmilPage = () => {
   return (
-    <section className={ "page-section" }>
-      <h1 className={ `${ tradeWinds.className } mb-4 text-3xl tracking-widest` }>MAGISKE EMIL</h1>
+    <section className={"page-section"}>
+      <h1 className={`${tradeWinds.className} mb-4 text-3xl tracking-widest`}>
+        MAGISKE EMIL
+      </h1>
       <p>
         Jeg Emil og jeg er 12 år. Da jeg var seks år begyndte jeg at finde
         interesse for tryl og fik mit første trick og siden da er jeg blevet
@@ -16,7 +18,7 @@ const MagicEmilPage = () => {
         magiske show i nogen sinde kommer til at se.
       </p>
     </section>
-  )
-}
+  );
+};
 
-export default MagicEmilPage
+export default MagicEmilPage;

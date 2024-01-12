@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
-    .focus-outline {
-        @apply focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700;
-    }
-    .page-section {
-        @apply flex flex-col gap-6 pt-[146px] px-5 md:px-10 lg:px-20 xl:px-36;
-    }
+  .focus-outline {
+    @apply focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700;
+  }
+  .page-section {
+    @apply flex flex-col gap-6 pt-[146px] px-5 md:px-10 lg:px-20 xl:px-36;
+  }
 }

@@ -1,10 +1,10 @@
-import { ContactCardType } from "@/app/lib/contactCardData"
-import Image from "next/image"
+import { ContactCardType } from "@/app/lib/contactCardData";
+import Image from "next/image";
 
 type ContactCard = {
-  data: ContactCardType
-  key?: string
-}
+  data: ContactCardType;
+  key?: string;
+};
 
 export const ContactCard = ({ data }: ContactCard) => {
   return (
@@ -40,5 +40,5 @@ export const ContactCard = ({ data }: ContactCard) => {
         ) : null}
       </div>
     </section>
-  )
-}
+  );
+};

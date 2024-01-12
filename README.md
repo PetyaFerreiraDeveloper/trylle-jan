@@ -5,7 +5,7 @@ This project is a website for Magic Jan, and it contains library with pictures a
 
 First, run the development server:
 
-```npm run dev```
+`npm run dev`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

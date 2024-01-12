@@ -3,6 +3,6 @@ const nextConfig = {
   images: {
     domains: ["tryllejan.dk"],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

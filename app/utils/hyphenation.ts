@@ -1,5 +1,5 @@
-import createHyphenation, { HyphenationFunctionSync } from 'hyphen';
-import patterns from 'hyphen/patterns/da';
+import createHyphenation, { HyphenationFunctionSync } from "hyphen";
+import patterns from "hyphen/patterns/da";
 
 export const defaultMinWordLength = 15;
 

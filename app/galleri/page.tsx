@@ -3,7 +3,7 @@ import { GalleryPageType } from "../lib/types";
 
 const getData = async () => {
   const res = await fetch(
-    "https://tryllejan.dk/wp-json/wp/v2/media/?per_page=100"
+    "https://tryllejan.dk/wp-json/wp/v2/media/?per_page=100",
   );
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary

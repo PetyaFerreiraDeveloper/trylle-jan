@@ -1,10 +1,10 @@
 export type ReferenceCardType = {
-  title: string
-  description: string
-  writerName?: string
-  writerTitle?: string
-  date: string | Date
-}
+  title: string;
+  description: string;
+  writerName?: string;
+  writerTitle?: string;
+  date: string | Date;
+};
 
 export const referenceCardData: ReferenceCardType[] = [
   {
@@ -49,4 +49,4 @@ export const referenceCardData: ReferenceCardType[] = [
     writerTitle: "mor",
     date: "12. december 2023",
   },
-]
+];

@@ -1,11 +1,11 @@
 export type ContactCardType = {
-  title: string
-  subtitle: string
-  phone: string
-  email: string
-  cvr?: string
-  imgUrl: string
-}
+  title: string;
+  subtitle: string;
+  phone: string;
+  email: string;
+  cvr?: string;
+  imgUrl: string;
+};
 
 export const contactCardData: ContactCardType[] = [
   {
@@ -23,4 +23,4 @@ export const contactCardData: ContactCardType[] = [
     email: "Emil.kalojan@outlook.dk",
     imgUrl: "/emil.jpeg",
   },
-]
+];

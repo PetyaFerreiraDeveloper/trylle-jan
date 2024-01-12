@@ -1,21 +1,21 @@
-"use client" // This is a client component 👈🏽
+"use client"; // This is a client component 👈🏽
 
-import Link from "next/link"
-import clsx from "clsx"
-import { DesktopNav } from "../DesktopNav"
-import { Fragment, useState } from "react"
-import { Dialog, Transition } from "@headlessui/react"
-import Hamburger from "@/app/components/Hamburger"
+import Link from "next/link";
+import clsx from "clsx";
+import { DesktopNav } from "../DesktopNav";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import Hamburger from "@/app/components/Hamburger";
 
 const menuItems = [
   { name: "Galleri", href: "/galleri" },
   { name: "Referencer", href: "/referencer" },
   { name: "Magiske Emil", href: "/290-2" },
   { name: "Kontakt & Booking", href: "/kontakt" },
-]
+];
 
 export const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
@@ -79,7 +79,7 @@ export const Header = () => {
       <div
         className={clsx(
           "fixed top-0 pt-10 px-5 md:px-10 right-0 z-50 lg:hidden",
-          menuOpen ? "text-white" : "text-black"
+          menuOpen ? "text-white" : "text-black",
         )}
       >
         <button
@@ -94,5 +94,5 @@ export const Header = () => {
         </button>
       </div>
     </>
-  )
-}
+  );
+};

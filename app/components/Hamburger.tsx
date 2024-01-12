@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { LazyMotion, MotionConfig, m } from 'framer-motion';
+import * as React from "react";
+import { LazyMotion, MotionConfig, m } from "framer-motion";
 const loadFeatures = () =>
-  import('../utils/motion-features').then((res) => res.default);
+  import("../utils/motion-features").then((res) => res.default);
 
 type Props = { open: boolean; className?: string; animate?: boolean };
 
 const transition = {
-  type: 'tween',
+  type: "tween",
   duration: 0.2,
-  ease: 'easeInOut',
+  ease: "easeInOut",
 };
 
 const topVariants = {
@@ -37,36 +37,33 @@ function Hamburger({ open = false, className, animate }: Props) {
         className={className}
       >
         <LazyMotion features={loadFeatures}>
-          <MotionConfig
-            transition={undefined}
-            reducedMotion={'user'}
-          >
-          <g fill="currentColor">
-            <m.path
-              d="M4.222 2.808l16.97 16.97-1.414 1.414-16.97-16.97z"
-              animate={open ? 'open' : 'closed'}
-              variants={topVariants}
-              transition={transition}
-              className="burger-top !origin-center"
-              initial={false}
-            />
-            <m.path
-              d="M4.222 2.808l16.97 16.97-1.414 1.414-16.97-16.97z"
-              animate={open ? 'open' : 'closed'}
-              variants={middleVariants}
-              transition={transition}
-              className="burger-middle !origin-center"
-              initial={false}
-            />
-            <m.path
-              d="M2.808 19.778l16.97-16.97 1.414 1.414-16.97 16.97z"
-              animate={open ? 'open' : 'closed'}
-              variants={bottomVariants}
-              transition={transition}
-              className="burger-bottom !origin-center"
-              initial={false}
-            />
-          </g>
+          <MotionConfig transition={undefined} reducedMotion={"user"}>
+            <g fill="currentColor">
+              <m.path
+                d="M4.222 2.808l16.97 16.97-1.414 1.414-16.97-16.97z"
+                animate={open ? "open" : "closed"}
+                variants={topVariants}
+                transition={transition}
+                className="burger-top !origin-center"
+                initial={false}
+              />
+              <m.path
+                d="M4.222 2.808l16.97 16.97-1.414 1.414-16.97-16.97z"
+                animate={open ? "open" : "closed"}
+                variants={middleVariants}
+                transition={transition}
+                className="burger-middle !origin-center"
+                initial={false}
+              />
+              <m.path
+                d="M2.808 19.778l16.97-16.97 1.414 1.414-16.97 16.97z"
+                animate={open ? "open" : "closed"}
+                variants={bottomVariants}
+                transition={transition}
+                className="burger-bottom !origin-center"
+                initial={false}
+              />
+            </g>
           </MotionConfig>
         </LazyMotion>
       </svg>

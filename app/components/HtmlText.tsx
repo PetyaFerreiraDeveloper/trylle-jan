@@ -70,11 +70,11 @@ export function HtmlText({
         {html
           ? parse(
               hyphenate ? hyphenateHTML(html) : html,
-              options || defaultOptions
+              options || defaultOptions,
             )
           : null}
       </>
     ),
-    [html, options, hyphenate]
+    [html, options, hyphenate],
   );
 }
