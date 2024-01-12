@@ -42,7 +42,7 @@ const ContactPage = async () => {
   return (
     <div className="page-section">
       <h2 className="text-3xl">Kontakt & Booking</h2>
-      <div className={"flex gap-10"}>
+      <div className={"flex flex-col lg:flex-row gap-10"}>
         {contactCardData.map((data) => (
           <ContactCard data={data} key={data.email} />
         ))}
