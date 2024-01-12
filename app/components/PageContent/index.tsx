@@ -23,7 +23,7 @@ export const PageContent = ({ text, imageUrl }: Props) => {
         />
         <div className="absolute z-10 bottom-0 w-full h-40 flex bg-gradient-to-t from-white to-white/0"></div>
       </section>
-      <section className="flex flex-col gap-4 px-5 md:px-10 lg:px-20 xl:px-36 lg:text-xl">
+      <section className="flex flex-col px-5 md:px-10 lg:px-20 xl:px-36 lg:text-xl">
         <HtmlText html={purgedText} />
       </section>
     </>

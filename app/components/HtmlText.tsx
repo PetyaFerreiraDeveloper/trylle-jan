@@ -45,6 +45,15 @@ export const defaultOptions: HTMLReactParserOptions = {
           </h1>
         );
       }
+      if (domNode.name === "p") {
+        const props = attributesToProps(domNode.attribs);
+
+        return (
+          <p {...props} className="mt-4">
+            {domToReact(domNode.children as DOMNode[])}
+          </p>
+        );
+      }
     }
   },
 };
