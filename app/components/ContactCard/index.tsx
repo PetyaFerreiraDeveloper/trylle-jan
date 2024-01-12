@@ -1,4 +1,4 @@
-import { ContactCardType } from "@/app/lib/contactCardData";
+import { ContactCardType } from "@/app/kontakt/page";
 import Image from "next/image";
 
 type ContactCard = {
@@ -6,7 +6,8 @@ type ContactCard = {
   key?: string;
 };
 
-export const ContactCard = ({ data }: ContactCard) => {
+export const ContactCard = async ({ data }: ContactCard) => {
+ 
   return (
     <section className="flex flex-col gap-2 items-center w-full md:w-72 max-w-96 rounded-lg border border-gray-200 shadow-md">
       <div className="w-full h-64 relative">
@@ -19,7 +20,7 @@ export const ContactCard = ({ data }: ContactCard) => {
         />
       </div>
       <div className="pb-5">
-        <h3 className="text-3xl mb-5">{data.title}</h3>
+        <h3 className="text-3xl my-5">{data.title}</h3>
         <h4>
           <span className="font-bold text-gray-500">Tryllekunstner: </span>
           <span>{data.subtitle}</span>
