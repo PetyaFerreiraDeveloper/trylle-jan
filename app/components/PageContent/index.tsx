@@ -1,13 +1,13 @@
-import Image from "next/image"
-import { HtmlText } from "@/app/components/HtmlText"
+import Image from "next/image";
+import { HtmlText } from "@/app/components/HtmlText";
 
 type Props = {
-  text: string
-  imageUrl: string
-}
+  text: string;
+  imageUrl: string;
+};
 
 export const PageContent = ({ text, imageUrl }: Props) => {
-  const purgedText = text.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g, "")
+  const purgedText = text.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g, "");
 
   return (
     <>
@@ -19,10 +19,13 @@ export const PageContent = ({ text, imageUrl }: Props) => {
           height={0}
           sizes="100vw"
           style={{ width: "100%", height: "auto" }}
+          priority={true}
         />
         <div className="absolute z-10 bottom-0 w-full h-40 flex bg-gradient-to-t from-white to-white/0"></div>
       </section>
-      <HtmlText html={purgedText} />
+      <section className="flex flex-col gap-4 px-5 md:px-10 lg:px-20 xl:px-36 lg:text-xl">
+        <HtmlText html={purgedText} />
+      </section>
     </>
-  )
-}
+  );
+};
