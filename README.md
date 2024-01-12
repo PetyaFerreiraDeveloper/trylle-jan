@@ -23,3 +23,6 @@ For backend we are using wordpress API to get images and text from the current w
 
 All images from the Galleri page are in this endpoint:
 [galery-end-point](https://tryllejan.dk/wp-json/wp/v2/media?parent=62)
+
+We are using react-icons library for icons
+[react-icons](https://react-icons.github.io/react-icons/)
