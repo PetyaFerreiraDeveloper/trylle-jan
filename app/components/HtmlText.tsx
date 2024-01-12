@@ -1,12 +1,12 @@
-import React, { useMemo } from 'react';
+import React, { useMemo } from "react";
 import parse, {
   attributesToProps,
   DOMNode,
   Element,
   HTMLReactParserOptions,
-} from 'html-react-parser';
+} from "html-react-parser";
 import Image from "next/image";
-import { hyphenateHTML } from '../utils/hyphenation';
+import { hyphenateHTML } from "../utils/hyphenation";
 
 function isElement(domNode: DOMNode): domNode is Element {
   // @ts-ignore
@@ -16,15 +16,15 @@ function isElement(domNode: DOMNode): domNode is Element {
 export const defaultOptions: HTMLReactParserOptions = {
   replace: (domNode) => {
     if (isElement(domNode)) {
-      if (domNode.name === 'img') {
+      if (domNode.name === "img") {
         const props = attributesToProps(domNode.attribs);
         const w = parseInt(props.width as string);
         const h = parseInt(props.height as string);
 
-        return props.type === 'image' ? (
+        return props.type === "image" ? (
           <Image
             className="my-8"
-            alt={ props.alt as string }
+            alt={props.alt as string}
             width={2048}
             height={(2048 * h) / w}
             src={{
@@ -50,21 +50,21 @@ interface HtmlTextProps {
  * so make sure to wrap this with `prose` or similar to get the correct styling.
  **/
 export function HtmlText({
-                           html,
-                           options = defaultOptions,
-                           hyphenate = true,
-                         }: HtmlTextProps) {
+  html,
+  options = defaultOptions,
+  hyphenate = true,
+}: HtmlTextProps) {
   return useMemo(
     () => (
       <>
         {html
           ? parse(
-            hyphenate ? hyphenateHTML(html) : html,
-            options || defaultOptions,
-          )
+              hyphenate ? hyphenateHTML(html) : html,
+              options || defaultOptions
+            )
           : null}
       </>
     ),
-    [html, options, hyphenate],
+    [html, options, hyphenate]
   );
 }
