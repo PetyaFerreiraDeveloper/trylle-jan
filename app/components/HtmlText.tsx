@@ -4,6 +4,7 @@ import parse, {
   DOMNode,
   Element,
   HTMLReactParserOptions,
+  domToReact,
 } from "html-react-parser";
 import Image from "next/image";
 import { hyphenateHTML } from "../utils/hyphenation";
@@ -34,6 +35,15 @@ export const defaultOptions: HTMLReactParserOptions = {
             }}
           />
         ) : null;
+      }
+      if (domNode.name === "h1") {
+        const props = attributesToProps(domNode.attribs);
+
+        return (
+          <h1 {...props} className="text-2xl lg:text-4xl">
+            {domToReact(domNode.children as DOMNode[])}
+          </h1>
+        );
       }
     }
   },
