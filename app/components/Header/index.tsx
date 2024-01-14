@@ -9,6 +9,7 @@ import Hamburger from "@/app/components/Hamburger";
 import Image from "next/image";
 
 const menuItems = [
+  { name: "Forside", href: "/" },
   { name: "Galleri", href: "/galleri" },
   { name: "Referencer", href: "/referencer" },
   { name: "Magiske Emil", href: "/290-2" },
