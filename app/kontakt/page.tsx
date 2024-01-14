@@ -17,8 +17,7 @@ const ContactPage = async () => {
     "https://tryllejan.dk/wp-json/wp/v2/media/?per_page=100",
     "Failed to fetch images from gallery page",
   );
-
-  const imgJan = imagesData[70]["source_url"];
+  const imgJan = imagesData[10]["source_url"];
   const imgEmil = imagesData[5]["source_url"];
 
   const contactCardData: ContactCardType[] = [
