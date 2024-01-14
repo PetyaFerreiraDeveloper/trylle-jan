@@ -9,11 +9,12 @@ type ContactCard = {
 export const ContactCard = async ({ data }: ContactCard) => {
   return (
     <section className="flex flex-col gap-2 items-center w-full md:w-72 max-w-96 rounded-lg border border-gray-200 shadow-md">
-      <div className="w-full h-64 relative">
+      <div className="w-full h-72 relative">
         <Image
-          className="rounded-t-lg object-none object-top"
+          className="rounded-t-lg object-top"
           src={data.imgUrl}
-          fill={true}
+          fill
+          objectFit="cover"
           alt="emil"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />

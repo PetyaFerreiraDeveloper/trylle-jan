@@ -14,11 +14,11 @@ export type ContactCardType = {
 
 const ContactPage = async () => {
   const imagesData: GalleryPageType[] = await getDataWP(
-    "https://tryllejan.dk/wp-json/wp/v2/media/?per_page=100",
+    "https://tryllejan.dk/wp-json/wp/v2/media?parent=64",
     "Failed to fetch images from gallery page",
   );
-  const imgJan = imagesData[10]["source_url"];
-  const imgEmil = imagesData[5]["source_url"];
+  const imgJan = imagesData[1]["source_url"];
+  const imgEmil = imagesData[0]["source_url"];
 
   const contactCardData: ContactCardType[] = [
     {
