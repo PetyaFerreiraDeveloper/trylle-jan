@@ -6,6 +6,7 @@ import { DesktopNav } from "../DesktopNav";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import Hamburger from "@/app/components/Hamburger";
+import Image from "next/image";
 
 const menuItems = [
   { name: "Galleri", href: "/galleri" },
@@ -19,12 +20,14 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed z-10 top-0 w-full mx-auto px-5 md:px-10 lg:px-20 xl:px-36 flex justify-between items-center pt-12 pb-2 shadow-md bg-white/60">
+      <header className="fixed z-10 top-0 w-full mx-auto px-5 md:px-10 lg:px-20 xl:px-36 flex justify-between items-center py-5 shadow-md bg-white/60">
         <Link
           href="/"
-          className="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer w-[200px]"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer"
         >
-          TrylleJan.dk
+          <div className="w-10 h-10 md:w-16 md:h-16">
+            <Image src="/logo.svg" alt="logo" width="64" height="64" />
+          </div>
         </Link>
         <DesktopNav menuItems={menuItems} />
         <Transition show={menuOpen} as={Fragment}>
@@ -78,7 +81,7 @@ export const Header = () => {
       </header>
       <div
         className={clsx(
-          "fixed top-0 pt-10 px-5 md:px-10 right-0 z-50 lg:hidden",
+          "fixed top-0 pt-5 md:pt-10 px-5 md:px-10 right-0 z-50 lg:hidden",
           menuOpen ? "text-white" : "text-black",
         )}
       >
