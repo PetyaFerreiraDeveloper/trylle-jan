@@ -2,7 +2,7 @@
 
 const TrustpilotWidget = () => {
   return (
-    <div className="absolute z-10 top-32 right-0 w-fit h-fit flex">
+    <div className="absolute z-10 bottom-4 md:bottom-0 md:top-32 justify-center md:right-0 w-full md:w-fit h-fit flex">
       {/* -- TrustBox widget - Review Collector -- */}
       <div
         className="trustpilot-widget"
