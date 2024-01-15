@@ -1,7 +1,15 @@
+import { getDataWP } from "../api/getDataWP";
 import { ReferenceCard } from "../components/ReferenceCard";
 import { referenceCardData } from "../lib/referenceCardData";
+import { FrontPageDataType } from "../lib/types";
 
-const ReferencesPage = () => {
+const ReferencesPage = async () => {
+  const data: FrontPageDataType[] = await getDataWP(
+    "https://tryllejan.dk//wp-json/wp/v2/posts",
+    "Failed to fetch data",
+  );
+  // console.log(data);
+
   const updatedReferenceCardData = referenceCardData.map((card) => ({
     ...card,
     date: new Date(card.date),
@@ -18,6 +26,7 @@ const ReferencesPage = () => {
           <ReferenceCard review={card} key={card.title} />
         ))}
       </div>
+      {/* <p>{data[0].title.rendered}</p> */}
     </section>
   );
 };
