@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { HtmlText } from "@/app/components/HtmlText";
 import TrustpilotWidget from "../Trustpilot";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   text: string;
@@ -10,7 +11,19 @@ type Props = {
 };
 
 export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
+  const mountedRef = useRef<boolean>(false);
+  const [isMounted, setIsMounted] = useState(false);
   const purgedText = text.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g, "");
+
+  useEffect(() => {
+    mountedRef.current = true;
+    if(mountedRef.current) {
+      setIsMounted(true)
+    }
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   return (
     <>
@@ -26,7 +39,7 @@ export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
         />
         <div className="absolute z-10 bottom-0 w-full h-40 flex bg-gradient-to-t from-white to-white/0"></div>
 
-        {/* <TrustpilotWidget /> */}
+        {isMounted ? <TrustpilotWidget /> : null}
       </section>
       <section className="flex flex-col px-5 md:px-10 lg:px-20 xl:px-36 lg:text-xl">
         <HtmlText html={purgedText} />
