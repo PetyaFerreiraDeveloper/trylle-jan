@@ -14,8 +14,10 @@ export const ContactCard = async ({ data }: ContactCard) => {
           className="rounded-t-lg object-top"
           src={data.imgUrl}
           fill
-          objectFit="cover"
-          alt="emil"
+          style={{ objectFit: "cover" }}
+          placeholder="blur"
+          blurDataURL="https://placehold.co/600x400"
+          alt={data.title}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
