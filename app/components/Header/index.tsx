@@ -27,7 +27,7 @@ export const Header = () => {
           className="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer"
         >
           <div className="w-10 h-10 md:w-16 md:h-16">
-            <Image src="/logo.svg" alt="logo" width="64" height="64" />
+            <Image src="/logo.svg" alt="logo" width="64" height="64" priority/>
           </div>
         </Link>
         <DesktopNav menuItems={menuItems} />
