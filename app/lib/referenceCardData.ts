@@ -4,6 +4,7 @@ export type ReferenceCardType = {
   author?: string;
   position?: string;
   date: string | Date;
+  referenceDate: string | Date;
 };
 
 export const referenceCardData: ReferenceCardType[] = [
@@ -14,12 +15,14 @@ export const referenceCardData: ReferenceCardType[] = [
     author: "Mille Ditlevsen",
     position: "Kontorfuldmægtig",
     date: "25. november 2021",
+    referenceDate: "25. november 2021",
   },
   {
     title: "Skovens Forsamlingshus",
     content:
       "5⭐ ud af 5⭐ Super underholdende, både som TrylleJan og Julemand.",
     date: "27. december 2019",
+    referenceDate: "25. november 2021",
   },
 
   {
@@ -27,11 +30,13 @@ export const referenceCardData: ReferenceCardType[] = [
     content:
       "Efter flere mundtlige anbefalinger af tryllekunstneren TrylleJan valgte vi, indskolingsteamet på Borup Privatskole, at engagere TrylleJan til at underholde vores elever som en del af teamets årlige hyttetur. Vi havde bestilt Jan til at underholde fra kl. 18:00 og selvom vores elever var trætte efter en lang dag på GeoCenter Møn, og en bustur hjem på 1½ time, sørgede Jan for, at der var fuld fart på underholdningen fra start til slut.Eleverne blev præsenteret for mange flotte trylletricks, og der var skiftevis tricks som Jan, og hans dygtige medhjælper, selv klarede og tricks der involverede eleverne/tilskuerne, der efterfølgende blev belønnet med de flotteste ballondyr. Tusind tak for en super forestilling og det er bestemt ikke sidste gang vi gør brug af TrylleJan på vores skole.",
     date: "19. januar 2019",
+    referenceDate: "25. november 2021",
   },
   {
     title: "Privat 46 års fødselsdag",
     content: "Tak for et godt show, Jan. Vi var godt underholdt 😉 Vh",
     date: "12 marts 2018",
+    referenceDate: "25. november 2021",
   },
   {
     title: "Dansk El-Forbund afd. København",
@@ -40,6 +45,7 @@ export const referenceCardData: ReferenceCardType[] = [
     author: "Lars Bæk",
     position: "formand",
     date: "19. januar 2019",
+    referenceDate: "25. november 2021",
   },
   {
     title: "Privat 5 års fødselsdag",
@@ -48,5 +54,6 @@ export const referenceCardData: ReferenceCardType[] = [
     author: "Petya Naydenova Ferreira",
     position: "mor",
     date: "12. december 2023",
+    referenceDate: "25. november 2021",
   },
 ];
