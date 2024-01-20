@@ -1,4 +1,5 @@
-import { ReferenceCardType } from "@/app/lib/referenceCardData";
+import { ReferenceCardType } from "@/app/lib/types";
+
 type Props = {
   review: ReferenceCardType;
   key: string;
