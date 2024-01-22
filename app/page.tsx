@@ -1,3 +1,4 @@
+import { StringDecoder } from "string_decoder";
 import { getDataWP } from "./api/getDataWP";
 import { PageContent } from "./components/PageContent";
 import { FrontPageDataType, GalleryPageType } from "./lib/types";
@@ -14,11 +15,16 @@ const Home = async () => {
     "https://tryllejan.dk/wp-json/wp/v2/media?parent=58",
     "Failed to fetch Hero image",
   );
+  
+  let imageUrl: string = "/frontPage.jpg";
+  if (imageData.length !== 0) {
+    imageUrl = imageData[0]["source_url"];
+  }
 
   return (
     <PageContent
       text={data.content.rendered}
-      imageUrl={imageData[0]["source_url"]}
+      imageUrl={imageUrl}
       secretBtn={true}
     />
   );
