@@ -21,12 +21,12 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed z-10 top-0 w-full mx-auto px-5 md:px-10 lg:px-20 xl:px-36 flex justify-between items-center py-2 md:py-5 shadow-md bg-white/60">
+      <header className="fixed z-10 top-0 w-full mx-auto px-5 md:px-10 xl:px-36 flex justify-between items-center py-2 md:py-5 shadow-md bg-white/60">
         <Link
           href="/"
           className="flex items-center cursor-pointer"
         >
-          <div className="w-10 h-10 md:w-16 md:h-16 relative">
+          <div className="w-16 h-16 md:w-24 md:h-24 relative">
             <Image
               src="/logo.svg"
               alt="logo"
@@ -90,7 +90,7 @@ export const Header = () => {
       </header>
       <div
         className={clsx(
-          "fixed top-0 pt-2 md:pt-10 px-5 md:px-10 right-0 z-50 lg:hidden",
+          "fixed top-0 pt-5 md:pt-10 px-5 md:px-10 right-0 z-50 lg:hidden",
           menuOpen ? "text-white" : "text-black",
         )}
       >
