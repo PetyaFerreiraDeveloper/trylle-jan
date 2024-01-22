@@ -21,10 +21,10 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed z-10 top-0 w-full mx-auto px-5 md:px-10 lg:px-20 xl:px-36 flex justify-between items-center py-5 shadow-md bg-white/60">
+      <header className="fixed z-10 top-0 w-full mx-auto px-5 md:px-10 lg:px-20 xl:px-36 flex justify-between items-center py-2 md:py-5 shadow-md bg-white/60">
         <Link
           href="/"
-          className="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer"
+          className="flex items-center cursor-pointer"
         >
           <div className="w-10 h-10 md:w-16 md:h-16 relative">
             <Image
@@ -33,8 +33,10 @@ export const Header = () => {
               fill
               style={{ objectFit: "contain" }}
               priority
+              className=""
             />
           </div>
+          <span className="text-lg md:text-xl lg:text-2xl font-bold self-end">Tryllejan.dk</span>
         </Link>
         <DesktopNav menuItems={menuItems} />
         <Transition show={menuOpen} as={Fragment}>
@@ -88,7 +90,7 @@ export const Header = () => {
       </header>
       <div
         className={clsx(
-          "fixed top-0 pt-5 md:pt-10 px-5 md:px-10 right-0 z-50 lg:hidden",
+          "fixed top-0 pt-2 md:pt-10 px-5 md:px-10 right-0 z-50 lg:hidden",
           menuOpen ? "text-white" : "text-black",
         )}
       >
