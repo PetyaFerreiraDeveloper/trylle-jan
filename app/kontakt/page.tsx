@@ -18,19 +18,13 @@ const ContactPage = async () => {
     "Failed to fetch images from gallery page",
   );
 
-  
   let imgJan: string = "/jan.jpg";
   let imgEmil = "/emil.jpg";
   if (imagesData.length != 0) {
     for (let img of imagesData) {
-      console.log(img.alt_text);
-      
-      const arrayOfImageNames = img.slug.split(" ");
-      console.log(arrayOfImageNames);
-      
-      if (arrayOfImageNames.includes("Jan")) {
+      if (img.alt_text == "jan") {
         imgJan = img.source_url;
-      } else if (arrayOfImageNames.includes("Emil")) {
+      } else if (img.alt_text == "emil") {
         imgEmil = img.source_url;
       }
     }
