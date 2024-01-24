@@ -17,8 +17,24 @@ const ContactPage = async () => {
     "https://tryllejan.dk/wp-json/wp/v2/media?parent=64",
     "Failed to fetch images from gallery page",
   );
-  const imgJan = imagesData[1]["source_url"];
-  const imgEmil = imagesData[0]["source_url"];
+
+  
+  let imgJan: string = "/jan.jpg";
+  let imgEmil = "/emil.jpg";
+  if (imagesData.length != 0) {
+    for (let img of imagesData) {
+      console.log(img.alt_text);
+      
+      const arrayOfImageNames = img.slug.split(" ");
+      console.log(arrayOfImageNames);
+      
+      if (arrayOfImageNames.includes("Jan")) {
+        imgJan = img.source_url;
+      } else if (arrayOfImageNames.includes("Emil")) {
+        imgEmil = img.source_url;
+      }
+    }
+  }
 
   const contactCardData: ContactCardType[] = [
     {

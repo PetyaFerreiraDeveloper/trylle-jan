@@ -14,7 +14,6 @@ const ScrollBarReviews = (props: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const scroll = (scrollOffset: number) => {
-    console.log("clicked");
 
     if (ref.current) {
       ref.current.scrollLeft += scrollOffset;
