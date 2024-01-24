@@ -19,8 +19,10 @@ const GalleryImage = (props: Props) => {
   const { data, key } = props;
 
   const onClickHandler = (data: GalleryPageType) => {
-    setLargeImage(true);
-    setImageDetails({ imageUrl: data.source_url, altText: data.alt_text });
+    if (window.innerWidth >= 768) {
+      setLargeImage(true);
+      setImageDetails({ imageUrl: data.source_url, altText: data.alt_text });
+    }
   };
 
   return (
