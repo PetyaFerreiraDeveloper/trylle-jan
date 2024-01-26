@@ -15,8 +15,9 @@ const LargeImage = (props: Props) => {
   const { imageUrl, altText } = props.data;
   const { setLargeImage } = props;
   return (
-    <div className="relative z-10 flex items-center justify-center">
-      <div className="fixed w-3/4 h-full inset-0 m-auto">
+    <div className="relative flex items-center justify-center w-full h-full">
+      <div className="flex fixed z-10 inset-0 bg-white/80 opacity-100" onClick={ () => setLargeImage(false) }></div>
+      <div className="fixed z-20 w-3/4 h-full inset-0 m-auto my-6">
         <div
           className="absolute top-2 right-2 z-20 cursor-pointer"
           onClick={() => setLargeImage(false)}
@@ -25,10 +26,10 @@ const LargeImage = (props: Props) => {
         </div>
         <Image
           className="rounded-lg object-top"
-          alt={altText}
-          src={imageUrl}
+          alt={ altText }
+          src={ imageUrl }
           fill
-          style={{ objectFit: "cover" }}
+          style={ { objectFit: "cover" } }
           sizes="(max-width: 640px) 100vw,
                   (max-width: 1280px) 50vw,
                   (max-width: 1536px) 33vw,
