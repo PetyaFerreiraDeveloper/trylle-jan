@@ -13,22 +13,22 @@ export type ContactCardType = {
 };
 
 const ContactPage = async () => {
-  const imagesData: GalleryPageType[] = await getDataWP(
-    "https://tryllejan.dk/wp-json/wp/v2/media?parent=64",
-    "Failed to fetch images from gallery page",
-  );
+  // const imagesData: GalleryPageType[] = await getDataWP(
+  //   "https://tryllejan.dk/wp-json/wp/v2/media?parent=64",
+  //   "Failed to fetch images from gallery page",
+  // );
 
   let imgJan: string = "/jan.jpg";
   let imgEmil = "/emil.jpg";
-  if (imagesData.length != 0) {
-    for (let img of imagesData) {
-      if (img.alt_text == "jan") {
-        imgJan = img.source_url;
-      } else if (img.alt_text == "emil") {
-        imgEmil = img.source_url;
-      }
-    }
-  }
+  // if (imagesData.length != 0) {
+  //   for (let img of imagesData) {
+  //     if (img.alt_text == "jan") {
+  //       imgJan = img.source_url;
+  //     } else if (img.alt_text == "emil") {
+  //       imgEmil = img.source_url;
+  //     }
+  //   }
+  // }
 
   const contactCardData: ContactCardType[] = [
     {

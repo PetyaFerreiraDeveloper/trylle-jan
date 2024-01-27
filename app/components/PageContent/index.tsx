@@ -11,7 +11,6 @@ type Props = {
 };
 
 export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
-
   const purgedText = text.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g, "");
 
   return (
@@ -23,11 +22,11 @@ export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "100%", objectFit: "contain" }}
           priority={true}
+          fill
         />
         <div className="absolute z-10 bottom-0 w-full h-40 flex bg-gradient-to-t from-white to-white/0"></div>
-
       </section>
       <section className="flex flex-col px-5 md:px-10 lg:px-20 xl:px-36 lg:text-xl">
         <HtmlText html={purgedText} />
