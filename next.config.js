@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "wp.tryllejan.dk",
+        hostname: "www.tryllejan.dk",
         pathname: "**",
       },
       {
