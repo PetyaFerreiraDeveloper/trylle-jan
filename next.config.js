@@ -12,6 +12,16 @@ const nextConfig = {
         hostname: "wp.tryllejan.dk",
         pathname: "**",
       },
+      {
+        protocol: "http",
+        hostname: "",
+        pathname: "/photos/**",
+      },
+      {
+        protocol: "https",
+        hostname: "",
+        pathname: "/photos/**",
+      },
     ],
   },
 };

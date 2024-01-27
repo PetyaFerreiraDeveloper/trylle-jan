@@ -1,11 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { GalleryPageType } from "@/app/lib/types";
 import LargeImage from "../LargeImage";
 
 type Props = {
-  data: GalleryPageType;
+  photo: string;
   key: number;
 };
 
@@ -16,12 +15,12 @@ const GalleryImage = (props: Props) => {
     altText: "",
   });
 
-  const { data, key } = props;
+  const { photo, key } = props;
 
-  const onClickHandler = (data: GalleryPageType) => {
+  const onClickHandler = (photo: string) => {
     if (window.innerWidth >= 768) {
       setLargeImage(true);
-      setImageDetails({ imageUrl: data.source_url, altText: data.alt_text });
+      setImageDetails({ imageUrl: photo, altText: photo.slice(0,3).toString() });
     }
   };
 
@@ -33,12 +32,12 @@ const GalleryImage = (props: Props) => {
         <div
           key={key}
           className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
-          onClick={() => onClickHandler(data)}
+          onClick={() => onClickHandler(photo)}
         >
           <Image
             className="rounded-lg object-top overflow-hidden"
-            src={data.source_url}
-            alt={data.alt_text}
+            src={photo}
+            alt={photo.slice(0,3).toString()}
             width={720}
             height={480}
             sizes="(max-width: 640px) 100vw,
