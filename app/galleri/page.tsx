@@ -5,7 +5,7 @@ const GalleryPage = async () => {
   //   "https://tryllejan.dk/wp-json/wp/v2/media/?per_page=100",
   //   "Failed to fetch data",
   // );
-  const photos = Array.from(Array(10).keys())
+  const photos = Array.from(Array(40).keys())
 
   return (
     <section className="pt-[146px] mx-auto max-w-[1960px] p-4 ">

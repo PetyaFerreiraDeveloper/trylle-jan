@@ -14,12 +14,12 @@ const nextConfig = {
       },
       {
         protocol: "http",
-        hostname: "",
+        hostname: "www.tryllejan.dk",
         pathname: "/photos/**",
       },
       {
         protocol: "https",
-        hostname: "",
+        hostname: "www.tryllejan.dk",
         pathname: "/photos/**",
       },
     ],
