@@ -16,11 +16,10 @@ const LargeImage = (props: Props) => {
   const { setLargeImage } = props;
   return (
     <div className="relative flex items-center justify-center w-full h-full">
-      <div className="flex fixed z-10 inset-0 bg-white/80 opacity-100" onClick={ () => setLargeImage(false) }></div>
+      <div className="flex fixed z-20 inset-0 bg-white/80 opacity-100" onClick={ () => setLargeImage(false) }></div>
       <div
         className={"fixed z-20 inset-0 m-auto py-4 flex justify-center items-center" }
       >
-      {/*<div className="fixed z-20 w-fit h-full inset-0 m-auto">*/}
         <div className={"relative"}>
           <div
             className="absolute top-2 right-2 z-20 cursor-pointer"
