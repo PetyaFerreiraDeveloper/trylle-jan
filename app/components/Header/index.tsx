@@ -21,7 +21,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="fixed z-10 top-0 w-full mx-auto px-5 md:px-10 xl:px-36 flex justify-between items-center py-2 md:py-5 shadow-md bg-white/60">
+      <header className="fixed z-20 top-0 w-full mx-auto px-5 md:px-10 xl:px-36 flex justify-between items-center py-2 md:py-5 shadow-md bg-white/60">
         <Link
           href="/"
           className="flex items-center cursor-pointer"
