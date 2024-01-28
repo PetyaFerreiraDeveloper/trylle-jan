@@ -15,10 +15,10 @@ const LargeImage = (props: Props) => {
   const { imageUrl, altText } = props.data;
   const { setLargeImage } = props;
   return (
-    <div className="relative flex items-center justify-center w-full h-full">
-      <div className="flex fixed z-20 inset-0 bg-white/80 opacity-100" onClick={ () => setLargeImage(false) }></div>
+    <div className="relative flex items-center justify-center w-full h-full" onClick={ () => setLargeImage(false) }>
+      <div className="flex fixed z-10 inset-0 bg-white/80 opacity-100"></div>
       <div
-        className={"fixed z-20 inset-0 m-auto py-4 flex justify-center items-center" }
+        className={"fixed z-20 inset-0 m-auto py-4 flex justify-center items-center"}
       >
         <div className={"relative"}>
           <div
@@ -28,11 +28,11 @@ const LargeImage = (props: Props) => {
             <IoClose className="bg-white text-gray-800 w-10 h-10 rounded-lg" />
           </div>
           <Image
-            className="rounded-lg w-fit h-fit"
+            className="rounded-lg"
             alt={ altText }
             src={ imageUrl }
-            width={ 860 }
-            height={ 1280 }
+            width={ 420 }
+            height={ 840 }
           />
         </div>
       </div>

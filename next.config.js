@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
+const dns = require("dns");
+
+dns.setDefaultResultOrder("ipv4first");
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "tryllejan.dk",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "www.tryllejan.dk",
+        hostname: "wp.tryllejan.dk",
         pathname: "**",
       },
       {
