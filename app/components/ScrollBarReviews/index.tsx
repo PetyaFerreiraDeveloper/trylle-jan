@@ -40,11 +40,11 @@ const ScrollBarReviews = (props: Props) => {
       </div>
       <div
         className="flex flex-col gap-8 md:flex-row overflow-x-scroll"
-        ref={ref}
+        ref={ ref }
       >
-        {data.map((card) => (
-          <ReferenceCard review={card} key={card.title} />
-        ))}
+        { data.map((card) => (
+          <ReferenceCard review={ card } key={ card.title } />
+        )) }
       </div>
     </div>
   );
