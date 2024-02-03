@@ -13,10 +13,11 @@ const MagicEmilPage = async () => {
     "Failed to fetch Hero image",
   );
 
+  const localImageUrl = "/emil.jpg";
   return (
     <PageContent
       text={pageData.content.rendered}
-      imageUrl={imageData[0]["source_url"]}
+      imageUrl={imageData[0] ? imageData[0]["source_url"] : localImageUrl}
     />
   );
 };

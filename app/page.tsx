@@ -15,10 +15,12 @@ const Home = async () => {
     "Failed to fetch Hero image",
   );
 
+  const placeHolderImage = "/frontPage";
+
   return (
     <PageContent
       text={data.content.rendered}
-      imageUrl={imageData[0]["source_url"]}
+      imageUrl={imageData[0] ? imageData[0]["source_url"] : placeHolderImage}
       secretBtn={true}
     />
   );
