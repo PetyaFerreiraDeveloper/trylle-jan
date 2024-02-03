@@ -16,7 +16,7 @@ const Home = async () => {
   //   "https://tryllejan.dk/wp-json/wp/v2/media?parent=58",
   //   "Failed to fetch Hero image",
   // );
-  
+
   let imageUrl: string = "/frontPage.jpg";
   // if (imageData.length !== 0) {
   //   imageUrl = imageData[0]["source_url"];

@@ -1,4 +1,4 @@
-import { ContactCardType } from "@/app/kontakt/page";
+import { ContactCardType } from "@/frontend/app/kontakt/page";
 import Image from "next/image";
 
 type ContactCard = {

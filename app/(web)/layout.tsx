@@ -19,10 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-       <head>
-        <link rel='icon' href='/logo.svg'/>
-         {/* TrustBox script */}
-         <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+      <head>
+        <link rel="icon" href="/logo.svg" />
+        {/* TrustBox script */}
+        <script
+          type="text/javascript"
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          async
+        ></script>
       </head>
       <body className={`${josefinSans.className} flex flex-col min-h-screen`}>
         <Header />

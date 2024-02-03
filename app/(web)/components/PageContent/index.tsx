@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import { HtmlText } from "@/app/components/HtmlText";
 import TrustpilotWidget from "../Trustpilot";
 import { useEffect, useRef, useState } from "react";
+import { HtmlText } from "../HtmlText";
 
 type Props = {
   text: string;

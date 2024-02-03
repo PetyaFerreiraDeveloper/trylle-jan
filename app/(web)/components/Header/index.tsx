@@ -5,8 +5,8 @@ import clsx from "clsx";
 import { DesktopNav } from "../DesktopNav";
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import Hamburger from "@/app/components/Hamburger";
 import Image from "next/image";
+import Hamburger from "../Hamburger";
 
 const menuItems = [
   { name: "Forside", href: "/" },
@@ -22,10 +22,7 @@ export const Header = () => {
   return (
     <>
       <header className="fixed z-20 top-0 w-full mx-auto px-5 md:px-10 xl:px-36 flex justify-between items-center py-2 md:py-5 shadow-md bg-white/60">
-        <Link
-          href="/"
-          className="flex items-center cursor-pointer"
-        >
+        <Link href="/" className="flex items-center cursor-pointer">
           <div className="w-16 h-16 md:w-24 md:h-24 relative">
             <Image
               src="/logo.svg"
@@ -36,7 +33,9 @@ export const Header = () => {
               className=""
             />
           </div>
-          <span className="text-lg md:text-xl lg:text-2xl font-bold self-end">Tryllejan.dk</span>
+          <span className="text-lg md:text-xl lg:text-2xl font-bold self-end">
+            Tryllejan.dk
+          </span>
         </Link>
         <DesktopNav menuItems={menuItems} />
         <Transition show={menuOpen} as={Fragment}>

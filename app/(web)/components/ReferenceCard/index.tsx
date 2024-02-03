@@ -1,4 +1,4 @@
-import { ReferenceCardType } from "@/app/lib/types";
+import { ReferenceCardType } from "@/frontend/app/lib/types";
 
 type Props = {
   review: ReferenceCardType;

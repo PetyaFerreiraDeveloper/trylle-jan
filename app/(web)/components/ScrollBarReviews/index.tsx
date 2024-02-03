@@ -1,5 +1,5 @@
 "use client";
-import { UpdatedReferenceCardDataType } from "@/app/referencer/page";
+import { UpdatedReferenceCardDataType } from "@/frontend/app/referencer/page";
 import React, { useRef } from "react";
 import { ReferenceCard } from "../ReferenceCard";
 import { FaChevronRight } from "react-icons/fa";
@@ -14,7 +14,6 @@ const ScrollBarReviews = (props: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const scroll = (scrollOffset: number) => {
-
     if (ref.current) {
       ref.current.scrollLeft += scrollOffset;
     }

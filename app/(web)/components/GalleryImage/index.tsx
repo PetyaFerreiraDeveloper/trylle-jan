@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { GalleryPageType } from "@/app/lib/types";
 import LargeImage from "../LargeImage";
+import { GalleryPageType } from "../../lib/types";
 
 type Props = {
   data: GalleryPageType;
