@@ -9,27 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.17",
+    "@headlessui/react": "^2.2.4",
     "@types/hyphen": "^1.6.7",
-    "clsx": "^2.1.0",
-    "framer-motion": "^10.17.9",
-    "html-react-parser": "^5.0.11",
-    "hyphen": "^1.10.4",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.0.1"
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.18.1",
+    "html-react-parser": "^5.2.5",
+    "hyphen": "^1.10.6",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-icons": "^5.5.0",
+    "next": "^15.3.4"
   },
   "devDependencies": {
+    "typescript": "^5",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "postcss": "^8.4.32",
-    "prettier": "^3.1.1",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5"
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.4",
+    "@eslint/eslintrc": "^3"
   }
 }
