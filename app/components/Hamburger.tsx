@@ -6,9 +6,9 @@ const loadFeatures = () =>
 type Props = { open: boolean; className?: string; animate?: boolean };
 
 const transition = {
-  type: "tween",
+  type: "tween" as const,
   duration: 0.2,
-  ease: "easeInOut",
+  ease: "easeInOut" as const,
 };
 
 const topVariants = {
