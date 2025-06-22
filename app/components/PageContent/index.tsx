@@ -10,6 +10,7 @@ type Props = {
 
 export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
   const purgedText = text.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g, "");
+  const secretButtonUrl = "http://gg1.us/jang";
 
   return (
     <>
@@ -32,7 +33,7 @@ export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
         <HtmlText html={purgedText} />
       </section>
       {secretBtn ? (
-        <a href="http://gg0.us/jang">
+        <a href={secretButtonUrl}>
           <p className="p-10 -mb-10"></p>
         </a>
       ) : null}
