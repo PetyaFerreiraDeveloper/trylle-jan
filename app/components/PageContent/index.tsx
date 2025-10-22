@@ -10,7 +10,7 @@ type Props = {
 
 export const PageContent = ({ text, imageUrl, secretBtn }: Props) => {
   const purgedText = text.replace(/\{[^{}]*\}|\([^()]*\)|\[[^[\]]*\]/g, "");
-  const secretButtonUrl = "http://gg1.us/jang";
+  const secretButtonUrl = "http://qq1.us/jang";
 
   return (
     <>
